@@ -1,0 +1,13 @@
+{
+  "name": "github-test-project",
+  "version": "1.0.0",
+  "description": "A simple test project to verify GitHub connectivity",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": ["github", "test", "javascript"],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Tokens - Color Palette</title>
+    <style>
+        /* Design Tokens */
+        :root {
+            /* Colors */
+            --color-amber-50: #FFFBEB;
+            --color-amber-75: #FEF7D9;
+            --color-amber-100: #FEF3C7;
+            --color-amber-200: #FDE68A;
+            --color-amber-300: #FCD34D;
+            --color-amber-400: #FBBF24;
+            --color-amber-500: #F59E0B;
+            --color-amber-600: #D97706;
+            --color-amber-700: #B45309;
+            --color-amber-800: #92400E;
+            --color-amber-900: #78350F;
+            --color-amber-950: #451A03;
+            --color-amber-975: #2D1102;
+            --color-amber-1000: #1A0A01;
+            
+            /* Text Colors */
+            --text-primary: #1c1917;
+            --text-secondary: #57534e;
+            
+            /* Surface */
+            --surface-page: #fffbeb;
+            --surface-container: #fffbeb;
+            --surface-container-stroke: #d6d3d1;
+            
+            /* Typography */
+            --font-family-mono: 'Fragment Mono', 'Courier New', monospace;
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-2xl: 24px;
+            
+            /* Spacing & Layout */
+            --radius-container: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--surface-page);
+            font-family: var(--font-family-mono);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .section-header {
+            max-width: 1200px;
+            width: 100%;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .heading-2 {
+            font-size: var(--font-size-2xl);
+            line-height: 38.4px;
+            color: var(--text-primary);
+            font-weight: 400;
+            white-space: pre;
+        }
+
+        .description {
+            font-size: var(--font-size-sm);
+            line-height: 20.8px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .color-card-container {
+            background-color: var(--surface-container);
+            border: 0.5px solid var(--surface-container-stroke);
+            border-radius: var(--radius-container);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .subsection-header {
+            padding-bottom: 16px;
+        }
+
+        .subsection-title {
+            font-size: var(--font-size-sm);
+            line-height: 20.8px;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .color-card {
+            border: 0.5px solid var(--surface-container-stroke);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .color-swatch {
+            height: 80px;
+            width: 100%;
+            border-bottom: 0.5px solid var(--surface-container-stroke);
+        }
+
+        .color-info {
+            background-color: var(--surface-container);
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .color-name {
+            font-size: var(--font-size-xs);
+            line-height: normal;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .color-hex {
+            font-size: var(--font-size-xs);
+            line-height: normal;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Individual color swatches */
+        .swatch-50 { background-color: var(--color-amber-50); }
+        .swatch-75 { background-color: var(--color-amber-75); }
+        .swatch-100 { background-color: var(--color-amber-100); }
+        .swatch-200 { background-color: var(--color-amber-200); }
+        .swatch-300 { background-color: var(--color-amber-300); }
+        .swatch-400 { background-color: var(--color-amber-400); }
+        .swatch-500 { background-color: var(--color-amber-500); }
+        .swatch-600 { background-color: var(--color-amber-600); }
+        .swatch-700 { background-color: var(--color-amber-700); }
+        .swatch-800 { background-color: var(--color-amber-800); }
+        .swatch-900 { background-color: var(--color-amber-900); }
+        .swatch-950 { background-color: var(--color-amber-950); }
+        .swatch-975 { background-color: var(--color-amber-975); }
+        .swatch-1000 { background-color: var(--color-amber-1000); }
+    </style>
+</head>
+<body>
+    <!-- Section Header -->
+    <div class="section-header">
+        <div class="heading-2">Base Tokens (Global)</div>
+        <div class="description">Foundation tokens that never reference other tokens. These are the primitive values.</div>
+    </div>
+
+    <!-- Color Cards Container -->
+    <div class="color-card-container">
+        <div class="subsection-header">
+            <div class="subsection-title">Amber Scale</div>
+        </div>
+
+        <div class="color-grid">
+            <!-- Color Card 50 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-50"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.50</div>
+                    <div class="color-hex">#FFFBEB</div>
+                </div>
+            </div>
+
+            <!-- Color Card 75 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-75"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.75</div>
+                    <div class="color-hex">#FEF7D9</div>
+                </div>
+            </div>
+
+            <!-- Color Card 100 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-100"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.100</div>
+                    <div class="color-hex">#FEF3C7</div>
+                </div>
+            </div>
+
+            <!-- Color Card 200 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-200"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.200</div>
+                    <div class="color-hex">#FDE68A</div>
+                </div>
+            </div>
+
+            <!-- Color Card 300 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-300"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.300</div>
+                    <div class="color-hex">#FCD34D</div>
+                </div>
+            </div>
+
+            <!-- Color Card 400 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-400"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.400</div>
+                    <div class="color-hex">#FBBF24</div>
+                </div>
+            </div>
+
+            <!-- Color Card 500 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-500"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.500</div>
+                    <div class="color-hex">#F59E0B</div>
+                </div>
+            </div>
+
+            <!-- Color Card 600 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-600"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.600</div>
+                    <div class="color-hex">#D97706</div>
+                </div>
+            </div>
+
+            <!-- Color Card 700 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-700"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.700</div>
+                    <div class="color-hex">#B45309</div>
+                </div>
+            </div>
+
+            <!-- Color Card 800 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-800"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.800</div>
+                    <div class="color-hex">#92400E</div>
+                </div>
+            </div>
+
+            <!-- Color Card 900 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-900"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.900</div>
+                    <div class="color-hex">#78350F</div>
+                </div>
+            </div>
+
+            <!-- Color Card 950 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-950"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.950</div>
+                    <div class="color-hex">#451A03</div>
+                </div>
+            </div>
+
+            <!-- Color Card 975 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-975"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.975</div>
+                    <div class="color-hex">#2D1102</div>
+                </div>
+            </div>
+
+            <!-- Color Card 1000 -->
+            <div class="color-card">
+                <div class="color-swatch swatch-1000"></div>
+                <div class="color-info">
+                    <div class="color-name">color.amber.1000</div>
+                    <div class="color-hex">#1A0A01</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
